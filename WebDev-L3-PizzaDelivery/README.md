@@ -5,7 +5,7 @@ A full-stack pizza delivery application developed for the **Oasis Infobyte Inter
 ## Live Demo
 
 - **Frontend:** https://pizza-delivery-client-eta.vercel.app/
-
+- **Backend API:** https://pizza-delivery-api-qnli.onrender.com
 ## Technologies Used
 
 - **Frontend:** React.js, Vite, CSS
