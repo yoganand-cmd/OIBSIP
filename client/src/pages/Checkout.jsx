@@ -7,7 +7,7 @@ import axios from "axios";
 import { useCart } from "../context/CartContext";
 
 import { useAuth } from "../context/AuthContext";
-
+import API_BASE_URL from "../config/api";
 
 
 function Checkout() {
@@ -121,7 +121,7 @@ const orderData = {
 
 const response = await axios.post(
 
-  "http://localhost:5000/api/orders",
+  `${API_BASE_URL}/api/orders`,
 
   orderData,
 
@@ -161,7 +161,7 @@ const handleRazorpayPayment = async () => {
 
     // Create a Razorpay order linked to the saved database order
     const response = await axios.post(
-      "http://localhost:5000/api/create-order",
+      `${API_BASE_URL}/api/create-order`,
       {
         orderId: savedOrder._id
       },
@@ -183,7 +183,7 @@ const handleRazorpayPayment = async () => {
       handler: async function (paymentResponse) {
         try {
           await axios.post(
-            "http://localhost:5000/api/verify-payment",
+            `${API_BASE_URL}/api/verify-payment`,
             paymentResponse,
             {
               headers: {

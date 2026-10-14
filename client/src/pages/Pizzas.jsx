@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
-
+import API_BASE_URL from "../config/api";
 import { useCart } from "../context/CartContext";
 
 function Pizzas() {
@@ -34,7 +34,7 @@ const [selectedToppings, setSelectedToppings] = useState([]);
 
     axios
 
-      .get("http://localhost:5000/api/pizzas")
+      .get(`${API_BASE_URL}/api/pizzas`)
 
       .then((response) => {
 

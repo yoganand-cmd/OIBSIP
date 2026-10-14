@@ -28,14 +28,15 @@ function Home() {
 
   return (
     <main style={{ backgroundColor: "#fffdf9" }}>
+
+      
+
       {/* Hero Section */}
       <section
         className="position-relative overflow-hidden text-white"
-        style={{
-          background:
-            "radial-gradient(ellipse at 80% 45%, #51251a 0%, #241512 42%, #171211 100%)",
-        }}
+        style={{ background: "#171211" }}
       >
+        
         <div
           className="position-absolute rounded-circle"
           aria-hidden="true"
@@ -49,7 +50,11 @@ function Home() {
           }}
         />
 
-        <div className="container position-relative py-4 py-lg-5">
+
+        <div
+  className="container position-relative py-4 py-lg-5"
+  style={{ zIndex: 1 }}
+>
           <div className="row align-items-center">
             <div className="col-lg-6 py-4 text-center text-lg-start">
               <span
@@ -205,8 +210,9 @@ function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-5">
+
+{/* Features Section */}
+<section className="py-5">
         <div className="container py-lg-4">
           <div className="text-center mb-5">
             <span

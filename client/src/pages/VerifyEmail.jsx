@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import axios from "axios";
-
+import API_BASE_URL from "../config/api";
 export default function VerifyEmail() {
   const [searchParams] = useSearchParams();
   const [status, setStatus] = useState("Verifying your email...");
@@ -19,7 +19,7 @@ export default function VerifyEmail() {
     let cancelled = false;
 
     axios
-      .post("http://localhost:5000/api/auth/verify-email", { token })
+      .post(`${API_BASE_URL}/api/auth/verify-email`, { token })
       .then((response) => {
         if (cancelled) return;
         setStatus(response.data.message || "Email verified successfully.");

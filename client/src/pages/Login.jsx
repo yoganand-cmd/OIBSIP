@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-
+import API_BASE_URL from "../config/api";
 function Login() {
 const { login } = useAuth();
 const navigate = useNavigate();
@@ -42,7 +42,7 @@ const handleForgotPassword = async (event) => {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/auth/forgot-password",
+      `${API_BASE_URL}/api/auth/forgot-password`,
       { email }
     );
 
@@ -66,7 +66,7 @@ setErrorMessage("");
 
 try {
   const response = await axios.post(
-    "http://localhost:5000/api/auth/login",
+    `${API_BASE_URL}/api/auth/login`,
     formData
   );
 

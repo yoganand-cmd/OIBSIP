@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
-
+import API_BASE_URL from "../config/api";
 function MyOrders() {
 const { user } = useAuth();
 const [orders, setOrders] = useState([]);
@@ -32,7 +32,7 @@ useEffect(() => {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        `http://localhost:5000/api/orders/user/${user.id}`,
+        `${API_BASE_URL}/api/orders/user/${user.id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
