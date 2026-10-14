@@ -28,6 +28,20 @@ A full-stack pizza delivery application developed for the **Oasis Infobyte Inter
 - Inventory management and automatic stock updates
 - Scheduled low-stock email alerts
 
+## Admin Demo Credentials
+
+Use these credentials to access the admin dashboard.
+
+- **Admin Login Email:** `admin@pizzadelivery.com`
+- **Admin Password:** `Admin12345`
+
+### Admin Dashboard Features
+
+- View and manage customer orders
+- Update order statuses
+- Monitor inventory and update stock quantities
+- Receive scheduled low-stock email alerts
+
 ## Project Structure
 
 - `client/` — React frontend
